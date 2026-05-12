@@ -69,7 +69,7 @@ MarkPad supports:
 | Platform         | Package     |
 | ---------------- | ----------- |
 | Windows          | `.exe`      |
-| Windows Portable | `.zip`      |
+| Windows Portable | `.exe`      |
 | macOS            | `.dmg`      |
 | Linux Ubuntu     | `.deb`      |
 | Linux Portable   | `.AppImage` |
@@ -103,10 +103,10 @@ MarkPad supports:
 
 Download:
 
-* `MarkPad-Setup.exe`
-* or `MarkPad-Portable.zip`
+* `MarkPad-Setup-1.0.1.exe` (Installer)
+* or `MarkPad-Portable-1.0.1.exe` (Standalone Portable)
 
-Run installer and launch MarkPad.
+Run the installer or simply launch the portable version.
 
 ---
 
@@ -114,7 +114,7 @@ Run installer and launch MarkPad.
 
 Download:
 
-* `MarkPad.dmg`
+* `MarkPad-1.0.1.dmg`
 
 Open the DMG and drag MarkPad into Applications.
 
@@ -127,14 +127,14 @@ Open the DMG and drag MarkPad into Applications.
 Install:
 
 ```bash
-sudo dpkg -i MarkPad.deb
+sudo dpkg -i MarkPad-1.0.1.deb
 ```
 
 ### Portable Linux
 
 ```bash
-chmod +x MarkPad.AppImage
-./MarkPad.AppImage
+chmod +x MarkPad-1.0.1.AppImage
+./MarkPad-1.0.1.AppImage
 ```
 
 ---
@@ -183,7 +183,7 @@ npm run dist
 Generated packages will appear in:
 
 ```text
-release/
+release/1.0.1/
 ```
 
 ---
@@ -201,106 +201,26 @@ src/
 ├── styles/
 └── App.tsx
 
-main/
+electron/
 ├── main.ts
 ├── preload.cjs
-└── ipc/
+└── ipcHandlers.ts
 ```
-
----
-
-# Goals
-
-MarkPad is focused on:
-
-* fast startup
-* low friction writing
-* native-feeling UX
-* simple markdown workflows
-* offline-first editing
-* clean desktop software
-
----
-
-# Planned Features
-
-## Upcoming
-
-* Tabs system
-* Global search
-* Folder-wide Markdown indexing
-* Command palette
-* Theme support
-* Vim mode
-* Export to PDF
-* Plugin system
-* AI-assisted writing tools
-* Workspace sync
-
----
-
-# Performance Philosophy
-
-MarkPad intentionally avoids:
-
-* unnecessary animations
-* bloated UI systems
-* browser-like complexity
-* heavy background services
-
-The goal is:
-
-> instant writing and instant preview.
-
----
-
-# Screenshots
-
-## Editor + Preview
-
-*Add screenshots here*
-
----
-
-## Fullscreen Preview
-
-*Add screenshots here*
-
----
-
-## Workspace Explorer
-
-*Add screenshots here*
-
----
-
-# Contributing
-
-Pull requests and improvements are welcome.
-
-If you find bugs or performance issues:
-
-1. Open an issue
-2. Reproduce the bug clearly
-3. Include logs/screenshots if possible
 
 ---
 
 # Release Notes
 
+## v1.0.1
+
+* **Portable Target**: Added standalone Windows Portable `.exe` target.
+* **Release Cleanups**: Removed all debug logs and DevTools auto-open in production.
+* **Production Parity**: Fixed asar-aware path resolution for `file://` loading.
+* **Security**: Hardened Content Security Policy and preload isolation.
+
 ## v1.0.0
 
 Initial public release.
-
-Features included:
-
-* Markdown editor
-* Live preview
-* Workspace explorer
-* File management
-* Undo/Redo
-* Cross-platform packaging
-* Electron desktop runtime
 
 ---
 
@@ -312,7 +232,7 @@ MIT License
 
 # Author
 
-Built by Akhil Sai.
+Built by **ZenithArcX**.
 
 ---
 
@@ -321,5 +241,3 @@ Built by Akhil Sai.
 MarkPad is evolving toward:
 
 > a lightweight Markdown workspace for developers, researchers, writers, and AI-assisted workflows.
-
-The focus is simplicity, speed, and real desktop productivity.
