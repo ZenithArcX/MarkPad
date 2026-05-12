@@ -2,9 +2,9 @@
   "name": "markpad",
   "productName": "MarkPad",
   "description": "A fast, minimal Markdown workspace IDE built for writers and developers.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
-    "name": "MarkPad",
+    "name": "ZenithArcX",
     "email": "hello@markpad.app"
   },
   "private": true,
