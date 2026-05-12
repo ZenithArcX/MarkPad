@@ -1,0 +1,21 @@
+# Tasks
+
+- `[x]` Phase 1: Scaffolding & Setup
+  - `[x]` Scaffold Electron + React + Vite + TS project
+  - `[x]` Install TailwindCSS, CodeMirror, react-markdown, zustand, electron-store
+  - `[x]` Configure Tailwind and Vite
+- `[x]` Phase 2: Electron Integration & IPC
+  - `[x]` Setup main process (ipcHandlers, File/native dialogs)
+  - `[x]` Setup native menus (File, Edit, View, Help)
+  - `[x]` Setup preload script for IPC bridging
+- `[x]` Phase 3: Application State & Settings
+  - `[x]` Create Zustand store for file state, content, and settings
+  - `[x]` Integrate `electron-store` for settings persistence
+- `[x]` Phase 4: UI Implementation
+  - `[x]` Build minimal SplitView component layout
+  - `[x]` Build CodeMirror editor component (`src/components/Editor.tsx`)
+  - `[x]` Build Markdown preview component (`src/components/Preview.tsx`)
+  - `[x]` Wire everything up in `App.tsx`
+- `[x]` Phase 5: Packaging & Build
+  - `[x]` Configure `electron-builder`
+  - `[x]` Verify application startup and builds

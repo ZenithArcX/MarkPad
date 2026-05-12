@@ -1,0 +1,71 @@
+{
+  "appId": "com.markpad.app",
+  "productName": "MarkPad",
+  "copyright": "Copyright © 2025 MarkPad",
+  "icon": "build/icon.ico",
+
+  "directories": {
+    "output": "release/${version}",
+    "buildResources": "build"
+  },
+
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "build/icon.ico",
+    "build/icon.png"
+  ],
+
+  "extraMetadata": {
+    "main": "dist-electron/main.js"
+  },
+
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "zip",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "build/icon.ico",
+    "artifactName": "${productName}-Setup-${version}.${ext}",
+    "requestedExecutionLevel": "asInvoker"
+  },
+
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "MarkPad",
+    "deleteAppDataOnUninstall": false,
+    "installerIcon": "build/icon.ico",
+    "uninstallerIcon": "build/icon.ico",
+    "installerHeaderIcon": "build/icon.ico",
+    "include": "build/installer.nsh"
+  },
+
+  "portable": {
+    "artifactName": "${productName}-Portable-${version}.${ext}"
+  },
+
+  "mac": {
+    "target": [{ "target": "dmg", "arch": ["x64", "arm64"] }],
+    "icon": "build/icon.png",
+    "artifactName": "${productName}-${version}.${ext}",
+    "category": "public.app-category.productivity"
+  },
+
+  "linux": {
+    "target": ["AppImage", "deb"],
+    "icon": "build/icon.png",
+    "artifactName": "${productName}-${version}.${ext}",
+    "category": "Office"
+  }
+}

@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 p-0 overflow-hidden font-sans text-gray-900 bg-white;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 
+  Compact Prose Styles
+  We override Tailwind Typography defaults to make the document feel continuous and compact 
+*/
+.prose {
+  line-height: 1.5 !important;
+}
+
+.prose p {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  margin-top: 0.8em !important;
+  margin-bottom: 0.4em !important;
+  font-weight: 700 !important;
+}
+
+.prose ul, .prose ol {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+  padding-left: 1.5em !important;
+}
+
+.prose li {
+  margin-top: 0.1em !important;
+  margin-bottom: 0.1em !important;
+}
+
+.prose pre {
+  margin-top: 0.4em !important;
+  margin-bottom: 0.4em !important;
+  padding: 0.75em !important;
+}
+
+.prose blockquote {
+  margin-top: 0.4em !important;
+  margin-bottom: 0.4em !important;
+  padding-left: 1em !important;
+}
+
+/* Seamless Textarea Styling */
+.editor-textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  overflow: hidden;
+  color: inherit;
+}
